@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using WordCounting.Models;
+using WordCounter.Models;
 
 namespace WordCounter.Tests
 {
@@ -11,10 +11,10 @@ namespace WordCounter.Tests
         [TestMethod]
         public void Count_CreatesNewCount_newCount()
         {
-            string userSentence = newCount.Sentence;
-            Count newCount = new Count ("I like cats more than dogs", "cats");
+            userInput newUserInput = new userInput("I like cats more than dogs", "cats");
+            string userSentence = newUserInput.Sentence;
             Assert.AreEqual(userSentence, "I like cats more than dogs");
-        }
+        }  
     }
 
 }

@@ -8,5 +8,7 @@ namespace WordCounter
   {
     public static void Main()
     {
-        
+
     }
+  }
+}

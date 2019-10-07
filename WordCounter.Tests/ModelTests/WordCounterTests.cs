@@ -9,12 +9,14 @@ namespace WordCounter.Tests
     public class WordCounterTests
     {
         [TestMethod]
-        public void Count_CreatesNewCount_newCount()
+        public void Counter_CreatesNewCounter_newCounterSentenceExists()
         {
-            userInput newUserInput = new userInput("I like cats more than dogs", "cats");
-            string userSentence = newUserInput.Sentence;
+            Counter userInput = new Counter("I like cats more than dogs", "cats");
+            string userSentence = userInput.Sentence;
             Assert.AreEqual(userSentence, "I like cats more than dogs");
         }  
-    }
 
+        [TestMethod]
+        
+    }
 }

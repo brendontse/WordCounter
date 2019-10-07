@@ -23,5 +23,16 @@ namespace WordCounter.Tests
             string userWord = userInput.Word;
             Assert.AreEqual(userWord, "cats");
         }
+
+        [TestMethod]
+        public void Counter_BreaksCounterIntoArray_SentenceSplitIntoArray()
+        {
+            Counter userInput = new Counter("I like cats more than dogs", "cats");
+            string[] userInputArray = userInput.SplitIntoArray();
+            string[] testArray = {"I", "like", "cats", "more", "than", "dogs"};
+            Assert.AreEqual(userInputArray.ToString(), testArray.ToString());
+        }
+
+        
     }
 }

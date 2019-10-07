@@ -17,6 +17,11 @@ namespace WordCounter.Tests
         }  
 
         [TestMethod]
-        
+        public void Counter_CreatesNewCounter_newCounterWordExists()
+        {
+            Counter userInput = new Counter("I like cats more than dogs", "cats");
+            string userWord = userInput.Word;
+            Assert.AreEqual(userWord, "cats");
+        }
     }
 }

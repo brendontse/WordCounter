@@ -33,6 +33,18 @@ namespace WordCounter.Tests
             Assert.AreEqual(userInputArray.ToString(), testArray.ToString());
         }
 
-        
+        [TestMethod]
+        public void Counter_CountsNumberOfOccurencesOfWord_NumberOfOccurences()
+        {
+            Counter userInput = new Counter("I like cats more than dogs", "cats");
+            string[] userInputArray = userInput.SplitIntoArray();
+            // i need to use CountWords() somehow??
+            Assert.AreEqual(userInput.Occurences, 1);
+        }
     }
 }
+
+// this is the error message when using dotnet test:
+
+// PS C:\Users\Brendon\desktop\wordcounter.solution\wordcounter.tests> dotnet test
+// Models\WordCounter.cs(12,23): error CS0161: 'Counter.userInput(string, string)': not all code paths return a value [C:\Users\Brendon\desktop\wordcounter.solution\WordCounter\WordCounter.csproj]
